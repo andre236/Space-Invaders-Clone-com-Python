@@ -9,7 +9,7 @@ class Player(pygame.sprite.Sprite):
         self.height_img = 30
         self.image = pygame.image.load("Sprites/player.png")
         self.image = pygame.transform.scale(self.image, [self.width_img, self.height_img])
-        self.rect = pygame.Rect(25, 600, self.width_img, self.height_img)
+        self.rect = pygame.Rect(420, 600, self.width_img, self.height_img)
 
         self.moveSpeed = 5
 

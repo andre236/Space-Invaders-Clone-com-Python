@@ -6,8 +6,8 @@ class Bullet(pygame.sprite.Sprite):
 
     def __init__(self, *group):
         super().__init__(*group)
-        self.image = pygame.image.load("Sprites/bulletPlayer.png")
-        self.image = pygame.transform.scale(self.image, [15, 25])
+        self.image = pygame.image.load("Sprites/bulletPlayer.fw.png")
+        self.image = pygame.transform.scale(self.image, [5, 25])
         self.speed = 10
         self.rect = self.image.get_rect()
 
@@ -16,10 +16,4 @@ class Bullet(pygame.sprite.Sprite):
 
         if self.rect.top < 0:
             Bullet.bullet_on_display = False
-            self.kill()
-
-
-    def check_collision(self, sprite1, sprite2):
-        col = pygame.sprite.collide_rect(sprite1, sprite2)
-        if col:
             self.kill()
